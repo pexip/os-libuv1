@@ -1,0 +1,93 @@
+Description: kfreebsd port
+Author: Jérémy Lal <kapouer@melix.org>
+Last-Update: 2015-09-19
+Forwarded: not yet
+Index: libuv1/configure.ac
+===================================================================
+--- libuv1.orig/configure.ac	2016-05-29 19:26:19.060785992 +0200
++++ libuv1/configure.ac	2016-05-29 19:26:19.056785952 +0200
+@@ -53,6 +53,7 @@
+ AM_CONDITIONAL([DARWIN],   [AS_CASE([$host_os],[darwin*],       [true], [false])])
+ AM_CONDITIONAL([DRAGONFLY],[AS_CASE([$host_os],[dragonfly*],    [true], [false])])
+ AM_CONDITIONAL([FREEBSD],  [AS_CASE([$host_os],[freebsd*],      [true], [false])])
++AM_CONDITIONAL([FREEBSD],  [AS_CASE([$host_os],[*freebsd*],      [true], [false])])
+ AM_CONDITIONAL([LINUX],    [AS_CASE([$host_os],[linux*],        [true], [false])])
+ AM_CONDITIONAL([NETBSD],   [AS_CASE([$host_os],[netbsd*],       [true], [false])])
+ AM_CONDITIONAL([OPENBSD],  [AS_CASE([$host_os],[openbsd*],      [true], [false])])
+Index: libuv1/src/unix/core.c
+===================================================================
+--- libuv1.orig/src/unix/core.c	2016-05-29 19:26:19.060785992 +0200
++++ libuv1/src/unix/core.c	2016-05-29 19:26:19.056785952 +0200
+@@ -58,7 +58,7 @@
+ # endif
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__FreeBSD_kernel__)
+ # include <sys/sysctl.h>
+ # include <sys/filio.h>
+ # include <sys/ioctl.h>
+@@ -524,7 +524,7 @@
+ 
+ 
+ #if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) || \
+-    defined(_AIX) || defined(__DragonFly__)
++    defined(_AIX) || defined(__DragonFly__) || defined(__FreeBSD_kernel__)
+ 
+ int uv__nonblock(int fd, int set) {
+   int r;
+@@ -554,7 +554,7 @@
+ }
+ 
+ #else /* !(defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) || \
+-	   defined(_AIX) || defined(__DragonFly__)) */
++	   defined(_AIX) || defined(__DragonFly__) || defined(__FreeBSD_kernel__)) */
+ 
+ int uv__nonblock(int fd, int set) {
+   int flags;
+@@ -618,7 +618,7 @@
+ }
+ 
+ #endif /* defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) || \
+-	  defined(_AIX) || defined(__DragonFly__) */
++	  defined(_AIX) || defined(__DragonFly__) || defined(__FreeBSD_kernel__) */
+ 
+ 
+ /* This function is not execve-safe, there is a race window
+Index: libuv1/include/uv-unix.h
+===================================================================
+--- libuv1.orig/include/uv-unix.h	2016-05-29 19:26:19.060785992 +0200
++++ libuv1/include/uv-unix.h	2016-05-29 19:26:19.056785952 +0200
+@@ -51,7 +51,7 @@
+ #elif defined(__APPLE__)
+ # include "uv-darwin.h"
+ #elif defined(__DragonFly__)  || \
+-      defined(__FreeBSD__)    || \
++      defined(__FreeBSD_kernel__)    || \
+       defined(__OpenBSD__)    || \
+       defined(__NetBSD__)
+ # include "uv-bsd.h"
+Index: libuv1/src/unix/fs.c
+===================================================================
+--- libuv1.orig/src/unix/fs.c	2016-05-29 19:26:19.060785992 +0200
++++ libuv1/src/unix/fs.c	2016-05-29 19:26:19.056785952 +0200
+@@ -193,6 +193,7 @@
+ #elif defined(__APPLE__)                                                      \
+     || defined(__DragonFly__)                                                 \
+     || defined(__FreeBSD__)                                                   \
++    || defined(__FreeBSD_kernel__)                                            \
+     || defined(__NetBSD__)                                                    \
+     || defined(__OpenBSD__)                                                   \
+     || defined(__sun)
+Index: libuv1/test/test-fs-event.c
+===================================================================
+--- libuv1.orig/test/test-fs-event.c	2016-05-29 19:26:19.060785992 +0200
++++ libuv1/test/test-fs-event.c	2016-05-29 19:26:19.056785952 +0200
+@@ -29,6 +29,7 @@
+ # if defined(__APPLE__) ||                                                    \
+      defined(__DragonFly__) ||                                                \
+      defined(__FreeBSD__) ||                                                  \
++     defined(__FreeBSD_kernel__) ||                                           \
+      defined(__OpenBSD__) ||                                                  \
+      defined(__NetBSD__)
+ #  define HAVE_KQUEUE 1
