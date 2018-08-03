@@ -1,7 +1,8 @@
 Source: libuv1
 Priority: optional
-Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
-Uploaders: Luca Bruno <lucab@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+XSBC-Pexip-Original-Uploaders: Luca Bruno <lucab@debian.org>
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
                dh-exec (>=0.3),
@@ -12,6 +13,7 @@ Section: libs
 Homepage: https://github.com/libuv/libuv
 Vcs-Browser: https://anonscm.debian.org/git/pkg-javascript/libuv1.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/libuv1.git
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: libuv1-dev
 Section: libdevel
