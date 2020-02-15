@@ -13,7 +13,7 @@ Section: libs
 Homepage: https://github.com/libuv/libuv
 Vcs-Browser: https://anonscm.debian.org/git/pkg-javascript/libuv1.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/libuv1.git
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: libuv1-dev
 Section: libdevel
