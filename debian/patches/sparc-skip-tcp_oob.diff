@@ -4,7 +4,7 @@ Author: Luca BRUNO <lucab@debian.org>
 
 --- a/test/test-tcp-oob.c
 +++ b/test/test-tcp-oob.c
-@@ -101,6 +101,12 @@
+@@ -114,6 +114,12 @@
    struct sockaddr_in addr;
    uv_loop_t* loop;
  
