@@ -3,13 +3,14 @@ Maintainer: Dominique Dumont <dod@debian.org>
 Uploaders: Luca Bruno <lucab@debian.org>
 Section: libs
 Priority: optional
-Build-Depends: debhelper (>= 12~),
+Build-Depends: cmake,
+               debhelper-compat (= 12),
                dh-exec,
                freebsd-glue [kfreebsd-any],
                libkvm-dev [kfreebsd-any],
                netbase,
                pkg-config
-Standards-Version: 4.3.0
+Standards-Version: 4.5.0
 Vcs-Browser: https://salsa.debian.org/debian/libuv1
 Vcs-Git: https://salsa.debian.org/debian/libuv1.git
 Homepage: https://github.com/libuv/libuv
@@ -18,9 +19,10 @@ Package: libuv1-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libkvm-dev [kfreebsd-any],
-         libuv1 (= ${binary:Version}),
-         ${misc:Depends}
+Depends: ${misc:Depends},
+         freebsd-glue [kfreebsd-any],
+         libkvm-dev [kfreebsd-any],
+         libuv1 (= ${binary:Version})
 Conflicts: libuv-dev,
            libuv0.10-dev
 Replaces: libuv-dev

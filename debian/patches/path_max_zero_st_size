@@ -74,8 +74,8 @@ Reviewed-by: dod
 
 --- a/src/unix/fs.c
 +++ b/src/unix/fs.c
-@@ -411,6 +411,17 @@
-   maxlen = uv__fs_pathmax_size(req->path);
+@@ -712,6 +712,17 @@
+     maxlen = uv__fs_pathmax_size(req->path);
  #endif
  
 +  /* Some symlinks in /proc report st_size == 0 */
