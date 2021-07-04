@@ -1,3 +1,11 @@
+libuv1 (1.24.1-1+deb10u1) buster-security; urgency=high
+
+  * add patch for CVE-2021-22918 (Closes: #990561)
+  * For buster, this patch also tweaks tests so they can be compiled.
+    (because of a missing macro and "static" declaration)
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 04 Jul 2021 18:42:30 +0200
+
 libuv1 (1.24.1-1) unstable; urgency=medium
 
   * new upstream version
