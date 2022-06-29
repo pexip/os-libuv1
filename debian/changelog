@@ -1,3 +1,9 @@
+libuv1 (1.40.0-2pexip2) pexip-bullseye; urgency=medium
+
+  * Fix spawn_setgid_fails test in CI environment.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Wed, 29 Jun 2022 14:53:03 +0100
+
 libuv1 (1.40.0-2pexip1) pexip-bullseye; urgency=medium
 
   * Rebuild for bullseye.

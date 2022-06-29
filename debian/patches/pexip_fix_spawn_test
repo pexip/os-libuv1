@@ -1,0 +1,16 @@
+Because we get root as an additional group in the Platform CI docker container
+(which doesn't matter as they are transient and thrown away on every build)
+we need to use a different group ID for this test.
+
+--- a/test/test-spawn.c
++++ b/test/test-spawn.c
+@@ -1493,7 +1493,8 @@
+ #if defined(__MVS__) || defined(__PASE__)
+   options.gid = -1;
+ #else
+-  options.gid = 0;
++  /* Changed for pexos as we run with root as an additional group */
++  options.gid = 32000;
+ #endif
+ 
+   r = uv_spawn(uv_default_loop(), &process, &options);
