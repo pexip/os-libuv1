@@ -1,3 +1,19 @@
 ---
+LICENSE:
+  override-license: Expat
+  skip: false
+README.md:
+  override-license: CC-BY-4.0
+  skip: false
 include/uv/android-ifaddrs.h:
   override-license: BSD-1-clause
+  skip: false
+include/uv/stdint-msvc2008.h:
+  override-license: BSD-3-clause
+  skip: false
+m4/ax_pthread.m4:
+  override-license: GPL3+ with autoconf exception
+  skip: false
+m4/libuv-check-flags.m4:
+  override-license: GPL3+ with autoconf exception
+  skip: false

@@ -37,7 +37,7 @@ Regenerate the symbol file:
   step without forgetting the --git-no-purge flag)
 - dpkg-gensymbols -plibuv1
 - review the diff (see links below)
-- create a patch : dpkg-gensymbols -plibuv1 | perl -p -E 's/([\d.]+)-\d.*/$1/;' > /tmp/sym.patch
+- create a patch : dpkg-gensymbols -plibuv1 |perl -p -E 's/([\d.]+)-\d[^#\n]*/$1/ if /^\+ /; s/~\d[^#\n]*//;' > /tmp/sym.patch
 - cd -
 - apply the patch: patch debian/libuv1.symbols /tmp/sym.patch
 
@@ -51,7 +51,7 @@ the following command.
 Note: only committed changes are used by gbp buildpackage
 
 Update the changelog:
-- gbp dch -Ra
+- gbp dch -Ra --commit
 
 Once everything is fine, build a source package and tag:
 - gbp buildpackage -S --git-tag
@@ -62,4 +62,4 @@ Push on salsa:
 For more details, see
 https://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.import.upstream-git.html#gbp.import.upstream.git.notarball
 
- -- domi <domi.dumont@free.fr>, Fri,  4 Jan 2019 19:15:32 +0100
+ -- Dominique Dumont <dod@debian.org>, Fri, 22 May 2020 18:55:50 +0200

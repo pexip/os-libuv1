@@ -19,25 +19,20 @@ export SOPKG=libuv$(SOVER)
 # tell glibc to disable dns requests for the tests
 export RES_OPTIONS = attempts:0
 
-%:
-	dh $@ --with autoreconf
+$(info "Note: Increasing timeout of time sensitive tests")
+export UV_TEST_TIMEOUT_MULTIPLIER = 2
 
-override_dh_autoreconf:
-	dh_autoreconf ./autogen.sh
+%:
+	dh $@ --without autoreconf
 
 override_dh_strip:
 	dh_strip --dbgsym-migration='$(SOPKG)-dbg (<< 1.11.0-1~)'
 
-override_dh_clean:
-	dh_clean
-	# Clean autoreconf files
-	$(RM) -- ltmain.sh m4/libtool.m4
-	find m4 -name 'lt*.m4' -delete
-
 # Testsuite is not robust enough, ignore errors on non-linux
 override_dh_auto_test:
 ifeq ($(DEB_BUILD_ARCH_OS),linux)
-	dh_auto_test
+# tests fail if they are run in parallel
+	dh_auto_test --no-parallel
 else
 	-dh_auto_test
 endif
