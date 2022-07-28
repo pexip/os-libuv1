@@ -74,7 +74,7 @@ Reviewed-by: dod
 
 --- a/src/unix/fs.c
 +++ b/src/unix/fs.c
-@@ -712,6 +712,17 @@
+@@ -731,6 +731,17 @@
      maxlen = uv__fs_pathmax_size(req->path);
  #endif
  

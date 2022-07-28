@@ -3,4 +3,3 @@ sparc-skip-tcp_oob.diff
 disable_ipv6_test.patch
 path_max_zero_st_size
 skip-multicast-test
-fix-cve-2021-22918

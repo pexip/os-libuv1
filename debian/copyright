@@ -4,8 +4,8 @@ Upstream-Contact: https://github.com/libuv/libuv/issues
 Source: https://github.com/libuv/libuv
 
 Files: *
-Copyright: 2011-2015, Joyent, Inc. and other Node contributors.
- 2015-2020, libuv project contributors.
+Copyright: 2015-2021, libuv project contributors.
+ 2011-2015, Joyent, Inc. and other Node contributors.
 License: Expat
 
 Files: .github/*
@@ -21,6 +21,12 @@ Files: AUTHORS
 Copyright: 2011-2015, Joyent, Inc. and other Node contributors.
 License: Expat
 
+Files: LINKS.md
+  libuv-static.pc.in
+Copyright: 2015-2020, libuv project contributors.
+ 2011-2015, Joyent, Inc. and other Node contributors.
+License: Expat
+
 Files: Makefile.am
   autogen.sh
 Copyright: 2011, 2013-2015, 2018, Ben Noordhuis <info@bnoordhuis.nl>
@@ -31,7 +37,8 @@ Copyright: 2011-2015, Joyent, Inc. and other Node contributors.
 License: CC-BY-4.0
 
 Files: debian/*
-Copyright: 2013, Luca Bruno <lucab@debian.org>
+Copyright: 2018-2022, Dominique Dumont <dod@debian.org>
+ 2013, Luca Bruno <lucab@debian.org>
 License: Expat
 
 Files: docs/*
@@ -40,15 +47,11 @@ License: Expat
 
 Files: docs/src/sphinx-plugins/*
 Copyright: 2013, Dariusz Dwornikowski.
-License: Expat
+License: Apache-2.0
 
 Files: include/*
 Copyright: Joyent, Inc. and other Node contributors.
 License: Expat
-
-Files: include/uv/android-ifaddrs.h
-Copyright: 1995, 1999, Berkeley Software Design, Inc.
-License: BSD-1-clause
 
 Files: include/uv/os390.h
   include/uv/posix.h
@@ -63,23 +66,19 @@ Files: include/uv/tree.h
 Copyright: 2002, Niels Provos <provos@citi.umich.edu>
 License: BSD-2-clause
 
-Files: libuv-static.pc.in
-Copyright: 2015-2020, libuv project contributors.
-  2011-2015, Joyent, Inc. and other Node contributors.
-License: Expat
-
 Files: m4/*
 Copyright: 2011-2015, Joyent, Inc. and other Node contributors.
 License: Expat
 
 Files: m4/ax_pthread.m4
 Copyright: 2011, Daniel Richard G. <skunk@iSKUNK.ORG>
-  2008, Steven G. Johnson <stevenj@alum.mit.edu>
+ 2008, Steven G. Johnson <stevenj@alum.mit.edu>
 License: GPL3+ with autoconf exception
 
 Files: m4/libuv-check-flags.m4
-Copyright: 2006-2008, xine project
-  2006-2008, Diego Pettenò <flameeyes gmail com>
+Copyright: 2021, libuv project
+ 2006-2008, xine project
+ 2006-2008, Diego Pettenò <flameeyes gmail com>
 License: GPL3+ with autoconf exception
 
 Files: src/*
@@ -95,7 +94,7 @@ License: ISC
 
 Files: src/inet.c
 Copyright: 2004, Internet Systems Consortium, Inc. ("ISC")
-  1996-1999, Internet Software Consortium.
+ 1996-1999, Internet Software Consortium.
 License: ISC
 
 Files: src/random.c
@@ -104,6 +103,8 @@ License: Expat
 
 Files: src/strscpy.c
   src/strscpy.h
+  src/strtok.c
+  src/strtok.h
   src/uv-data-getter-setters.c
 Copyright: libuv project contributors.
 License: Expat
@@ -114,9 +115,11 @@ Files: src/unix/aix-common.c
   src/unix/cygwin.c
   src/unix/darwin-stub.h
   src/unix/haiku.c
+  src/unix/hurd.c
   src/unix/ibmi.c
   src/unix/no-fsevents.c
   src/unix/no-proctitle.c
+  src/unix/os390-proctitle.c
   src/unix/os390-syscalls.c
   src/unix/os390-syscalls.h
   src/unix/os390.c
@@ -128,28 +131,24 @@ Files: src/unix/aix-common.c
 Copyright: libuv project contributors.
 License: Expat
 
-Files: src/unix/android-ifaddrs.c
-Copyright: 2014, Emergya (Cloud4all, FP7/2007-2013, grant agreement #289016)
-  2013, Kenneth MacKay
-License: BSD-2-clause
-
 Files: src/unix/atomic-ops.h
   src/unix/spinlock.h
 Copyright: 2011, 2013-2015, 2018, Ben Noordhuis <info@bnoordhuis.nl>
 License: ISC
 
-Files: src/unix/pthread-fixes.c
-Copyright: 2013, Sony Mobile Communications AB
-  2012, Google Inc.
-License: BSD-3-clause
-
-Files: src/unix/qnx.c
+Files: src/unix/epoll.c
+  src/unix/qnx.c
   src/unix/random-devurandom.c
   src/unix/random-getentropy.c
   src/unix/random-getrandom.c
   src/unix/random-sysctl-linux.c
 Copyright: libuv contributors.
 License: Expat
+
+Files: src/unix/pthread-fixes.c
+Copyright: 2013, Sony Mobile Communications AB
+ 2012, Google Inc.
+License: BSD-3-clause
 
 Files: src/win/detect-wakeup.c
   src/win/fs-fd-hash-inl.h
@@ -167,6 +166,7 @@ License: Expat
 Files: test/benchmark-ping-udp.c
   test/test-connect-unspecified.c
   test/test-eintr-handling.c
+  test/test-embed.c
   test/test-fork.c
   test/test-fs-copyfile.c
   test/test-fs-fd-hash.c
@@ -178,10 +178,12 @@ Files: test/benchmark-ping-udp.c
   test/test-ipc-heavy-traffic-deadlock-bug.c
   test/test-metrics.c
   test/test-pipe-set-fchmod.c
+  test/test-poll-multiple-handles.c
   test/test-poll-oob.c
   test/test-process-title-threadsafe.c
   test/test-signal-pending-on-close.c
   test/test-strscpy.c
+  test/test-strtok.c
   test/test-tcp-close-reset.c
   test/test-tcp-read-stop-start.c
   test/test-tmpdir.c
@@ -191,7 +193,8 @@ Files: test/benchmark-ping-udp.c
 Copyright: libuv project contributors.
 License: Expat
 
-Files: test/test-env-vars.c
+Files: test/benchmark-queue-work.c
+  test/test-env-vars.c
   test/test-get-passwd.c
   test/test-gethostname.c
   test/test-process-priority.c
@@ -203,6 +206,7 @@ Copyright: libuv contributors.
 License: Expat
 
 Files: test/test-idna.c
+  test/test-ip-name.c
   test/test-queue-foreach-delete.c
   test/test-udp-send-hang-loop.c
 Copyright: The libuv project and contributors.
@@ -212,6 +216,12 @@ Files: test/test-loop-configure.c
   test/test-pipe-set-non-blocking.c
 Copyright: 2011, 2013-2015, 2018, Ben Noordhuis <info@bnoordhuis.nl>
 License: ISC
+
+Files: test/test-not-readable-nor-writable-on-read-error.c
+  test/test-not-writable-after-shutdown.c
+  test/test-readable-on-eof.c
+Copyright: the libuv project contributors.
+License: Expat
 
 Files: test/test-pipe-connect-multiple.c
   test/test-pipe-connect-prepare.c
@@ -225,8 +235,12 @@ Files: test/test-poll-close-doesnt-corrupt-stack.c
 Copyright: Bert Belder, and other libuv contributors.
 License: Expat
 
-Files: test/test-tcp-alloc-cb-fail.c
+Files: test/test-shutdown-simultaneous.c
+  test/test-tcp-alloc-cb-fail.c
+  test/test-tcp-close-after-read-timeout.c
+  test/test-tcp-rst.c
   test/test-udp-connect.c
+  test/test-udp-connect6.c
   test/test-udp-sendmmsg-error.c
 Copyright: libuv project and contributors.
 License: Expat
@@ -243,25 +257,24 @@ Files: tools/*
 Copyright: 2011-2015, Joyent, Inc. and other Node contributors.
 License: Expat
 
-License: BSD-1-clause
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are
- met:
+License: Apache-2.0
+ This software is Copyright (c) 2021 by X. Ample.
  .
- 1. Redistributions of source code must retain the above copyright
- notice, this list of conditions and the following disclaimer.
+ This is free software, licensed under:
  .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
- IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
- TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+   The Apache License, Version 2.0, January 2004
+ .
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS"BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ On Debian systems, the complete text of the Apache License,
+ Version 2.0 can be found in '/usr/share/common-licenses/Apache-2.0'.
 
 License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without

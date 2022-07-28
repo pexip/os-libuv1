@@ -1,5 +1,10 @@
 ---
 LICENSE:
+  comment: |-
+    LICENSE file lists all the licenses that apply to libuv1. And licensecheck does not pick the right one.
+
+    The copyright overrides a statement like '2015-present' which is reported by licensecheck as '2015'
+  override-copyright: 2015-2021, libuv project contributors.
   override-license: Expat
   skip: false
 README.md:
