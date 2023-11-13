@@ -1,112 +1,112 @@
 libuv.so.1 libuv1 #MINVER#
 * Build-Depends-Package: libuv1-dev
-#MISSING: 1.40.0-1# (regex|optional)"^uv__" 1.0
- (arch=hurd-any)pthread_atfork@Base 1.22.0-1
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__accept4@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__accept@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__async_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__async_fork@Base 1.18.0
-#MISSING: 1.40.0-1# (optional)uv__async_stop@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__calloc@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__check_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__cloexec_fcntl@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__cloexec_ioctl@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__close_nocheckstdio@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__count_bufs@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__dup2_cloexec@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__dup3@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__dup@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__eventfd2@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__eventfd@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__fd_exists@Base 1.21.0
-#MISSING: 1.40.0-1# (optional)uv__free@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__fs_event_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__fs_poll_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__fs_scandir_cleanup@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__getaddrinfo_translate_error@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__getiovmax@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__getpwuid_r@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__handle_type@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__hrtime@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__idle_close@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__inotify_add_watch@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__inotify_fork@Base 1.18.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__inotify_init1@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__inotify_init@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__inotify_rm_watch@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_active@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_check_fd@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_feed@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_fork@Base 1.18.0
-#MISSING: 1.40.0-1# (optional)uv__io_init@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_poll@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_start@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__io_stop@Base 1.11.0
+#MISSING: 1.44.2-1# (regex|optional)"^uv__" 1.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__accept4@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__accept@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__async_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__async_fork@Base 1.18.0
+#MISSING: 1.44.2-1# (optional)uv__async_stop@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__calloc@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__check_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__cloexec_fcntl@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__cloexec_ioctl@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__close_nocheckstdio@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__count_bufs@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__dup2_cloexec@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__dup3@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__dup@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__eventfd2@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__eventfd@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__fd_exists@Base 1.21.0
+#MISSING: 1.44.2-1# (optional)uv__free@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__fs_event_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__fs_poll_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__fs_scandir_cleanup@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__getaddrinfo_translate_error@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__getiovmax@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__getpwuid_r@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__handle_type@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__hrtime@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__idle_close@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__inotify_add_watch@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__inotify_fork@Base 1.18.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__inotify_init1@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__inotify_init@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__inotify_rm_watch@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_active@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_check_fd@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_feed@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_fork@Base 1.18.0
+#MISSING: 1.44.2-1# (optional)uv__io_init@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_poll@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_start@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__io_stop@Base 1.11.0
  (arch=kfreebsd-any|optional)uv__kqueue_init@Base 1.22.0-1
-#MISSING: 1.40.0-1# (optional)uv__loop_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__loop_configure@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__make_close_pending@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__make_pipe@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__make_socketpair@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__malloc@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__next_timeout@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__nonblock_fcntl@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__nonblock_ioctl@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__open_cloexec@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__open_file@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__pipe2@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__pipe_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__platform_invalidate_fd@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__platform_loop_delete@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__platform_loop_init@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__poll_close@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__preadv@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__prepare_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__process_close@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__pwritev@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__realloc@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__recvmmsg@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__recvmsg@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__run_check@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__run_idle@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__run_prepare@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__run_timers@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=linux-any|optional)uv__sendmmsg@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__server_io@Base 1.11.0
-#MISSING: 1.40.0-1# (arch=!hurd-any !kfreebsd-any|optional)uv__set_process_title@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__signal_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__signal_global_once_init@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__signal_loop_cleanup@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__signal_loop_fork@Base 1.18.0
-#MISSING: 1.40.0-1# (optional)uv__socket@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__socket_sockopt@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__strdup@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__stream_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__stream_destroy@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__stream_flush_write_queue@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__stream_init@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__stream_open@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__strndup@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__tcp_bind@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__tcp_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__tcp_connect@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__tcp_keepalive@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__tcp_nodelay@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__timer_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__udp_bind@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__udp_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__udp_finish_close@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__udp_recv_start@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__udp_recv_stop@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__udp_send@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__udp_try_send@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__work_done@Base 1.11.0
-#MISSING: 1.40.0-1# (optional)uv__work_submit@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__loop_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__loop_configure@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__make_close_pending@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__make_pipe@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__make_socketpair@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__malloc@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__next_timeout@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__nonblock_fcntl@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__nonblock_ioctl@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__open_cloexec@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__open_file@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__pipe2@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__pipe_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__platform_invalidate_fd@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__platform_loop_delete@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__platform_loop_init@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__poll_close@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__preadv@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__prepare_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__process_close@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__pwritev@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__realloc@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__recvmmsg@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__recvmsg@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__run_check@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__run_idle@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__run_prepare@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__run_timers@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=linux-any|optional)uv__sendmmsg@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__server_io@Base 1.11.0
+#MISSING: 1.44.2-1# (arch=!hurd-any !kfreebsd-any|optional)uv__set_process_title@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__signal_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__signal_global_once_init@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__signal_loop_cleanup@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__signal_loop_fork@Base 1.18.0
+#MISSING: 1.44.2-1# (optional)uv__socket@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__socket_sockopt@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__strdup@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__stream_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__stream_destroy@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__stream_flush_write_queue@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__stream_init@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__stream_open@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__strndup@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__tcp_bind@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__tcp_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__tcp_connect@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__tcp_keepalive@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__tcp_nodelay@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__timer_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__udp_bind@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__udp_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__udp_finish_close@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__udp_recv_start@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__udp_recv_stop@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__udp_send@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__udp_try_send@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__work_done@Base 1.11.0
+#MISSING: 1.44.2-1# (optional)uv__work_submit@Base 1.11.0
  uv_accept@Base 1.4.2
  uv_async_init@Base 1.4.2
  uv_async_send@Base 1.4.2
+ uv_available_parallelism@Base 1.44.1
  uv_backend_fd@Base 1.4.2
  uv_backend_timeout@Base 1.4.2
  uv_barrier_destroy@Base 1.4.2
@@ -125,7 +125,7 @@ libuv.so.1 libuv1 #MINVER#
  uv_cond_signal@Base 1.4.2
  uv_cond_timedwait@Base 1.4.2
  uv_cond_wait@Base 1.4.2
- (arch=!hurd-any)uv_cpu_info@Base 1.4.2
+ uv_cpu_info@Base 1.4.2
  uv_cwd@Base 1.4.2
  uv_default_loop@Base 1.4.2
  uv_disable_stdio_inheritance@Base 1.4.2
@@ -135,10 +135,10 @@ libuv.so.1 libuv1 #MINVER#
  uv_dlsym@Base 1.4.2
  uv_err_name@Base 1.4.2
  uv_err_name_r@Base 1.22.0
- (arch=!hurd-any)uv_exepath@Base 1.4.2
+ uv_exepath@Base 1.4.2
  uv_fileno@Base 1.4.2
- (arch=!hurd-any)uv_free_cpu_info@Base 1.4.2
- (arch=!hurd-any)uv_free_interface_addresses@Base 1.4.2
+ uv_free_cpu_info@Base 1.4.2
+ uv_free_interface_addresses@Base 1.4.2
  uv_freeaddrinfo@Base 1.4.2
  uv_fs_access@Base 1.4.2
  uv_fs_chmod@Base 1.4.2
@@ -193,10 +193,10 @@ libuv.so.1 libuv1 #MINVER#
  uv_fs_utime@Base 1.4.2
  uv_fs_write@Base 1.4.2
  uv_get_constrained_memory@Base 1.30.1
- (arch=!hurd-any)uv_get_free_memory@Base 1.4.2
+ uv_get_free_memory@Base 1.4.2
  uv_get_osfhandle@Base 1.18.0
- (arch=!hurd-any)uv_get_process_title@Base 1.4.2
- (arch=!hurd-any)uv_get_total_memory@Base 1.4.2
+ uv_get_process_title@Base 1.4.2
+ uv_get_total_memory@Base 1.4.2
  uv_getaddrinfo@Base 1.4.2
  uv_getnameinfo@Base 1.4.2
  uv_getrusage@Base 1.4.2
@@ -217,11 +217,12 @@ libuv.so.1 libuv1 #MINVER#
  uv_if_indextoname@Base 1.18.0
  uv_inet_ntop@Base 1.4.2
  uv_inet_pton@Base 1.4.2
- (arch=!hurd-any)uv_interface_addresses@Base 1.4.2
+ uv_interface_addresses@Base 1.4.2
  uv_ip4_addr@Base 1.4.2
  uv_ip4_name@Base 1.4.2
  uv_ip6_addr@Base 1.4.2
  uv_ip6_name@Base 1.4.2
+ uv_ip_name@Base 1.43.0
  uv_is_active@Base 1.4.2
  uv_is_closing@Base 1.4.2
  uv_is_readable@Base 1.4.2
@@ -233,7 +234,7 @@ libuv.so.1 libuv1 #MINVER#
  uv_kill@Base 1.4.2
  uv_library_shutdown@Base 1.38.0
  uv_listen@Base 1.4.2
- (arch=!hurd-any)uv_loadavg@Base 1.4.2
+ uv_loadavg@Base 1.4.2
  uv_loop_alive@Base 1.4.2
  uv_loop_close@Base 1.4.2
  uv_loop_configure@Base 1.4.2
@@ -269,6 +270,7 @@ libuv.so.1 libuv1 #MINVER#
  uv_os_tmpdir@Base 1.9.0~
  uv_os_uname@Base 1.30.1
  uv_os_unsetenv@Base 1.18.0
+ uv_pipe@Base 1.42.0
  uv_pipe_bind@Base 1.4.2
  uv_pipe_chmod@Base 1.18.0
  uv_pipe_connect@Base 1.4.2
@@ -303,7 +305,7 @@ libuv.so.1 libuv1 #MINVER#
  uv_req_set_data@Base 1.20.2
  uv_req_size@Base 1.4.2
  uv_req_type_name@Base 1.20.2
- (arch=!hurd-any)uv_resident_set_memory@Base 1.4.2
+ uv_resident_set_memory@Base 1.4.2
  uv_run@Base 1.4.2
  uv_rwlock_destroy@Base 1.4.2
  uv_rwlock_init@Base 1.4.2
@@ -319,14 +321,15 @@ libuv.so.1 libuv1 #MINVER#
  uv_sem_trywait@Base 1.4.2
  uv_sem_wait@Base 1.4.2
  uv_send_buffer_size@Base 1.4.2
- (arch=!hurd-any)uv_set_process_title@Base 1.4.2
- (arch=!hurd-any)uv_setup_args@Base 1.4.2
+ uv_set_process_title@Base 1.4.2
+ uv_setup_args@Base 1.4.2
  uv_shutdown@Base 1.4.2
  uv_signal_init@Base 1.4.2
  uv_signal_start@Base 1.4.2
  uv_signal_start_oneshot@Base 1.18.0
  uv_signal_stop@Base 1.4.2
  uv_sleep@Base 1.34.2
+ uv_socketpair@Base 1.42.0
  uv_spawn@Base 1.4.2
  uv_stop@Base 1.4.2
  uv_stream_get_write_queue_size@Base 1.20.2
@@ -358,6 +361,7 @@ libuv.so.1 libuv1 #MINVER#
  uv_timer_start@Base 1.4.2
  uv_timer_stop@Base 1.4.2
  uv_translate_sys_error@Base 1.11.0
+ uv_try_write2@Base 1.42.0
  uv_try_write@Base 1.4.2
 #MISSING: 1.38.0-2# uv_try_write_cb@Base 1.11.0
  uv_tty_get_vterm_state@Base 1.33.1
@@ -389,7 +393,7 @@ libuv.so.1 libuv1 #MINVER#
  uv_udp_using_recvmmsg@Base 1.39.0
  uv_unref@Base 1.4.2
  uv_update_time@Base 1.4.2
- (arch=!hurd-any)uv_uptime@Base 1.4.2
+ uv_uptime@Base 1.4.2
  uv_version@Base 1.4.2
  uv_version_string@Base 1.4.2
  uv_walk@Base 1.4.2

@@ -1,3 +1,58 @@
+libuv1 (1.44.2-1) unstable; urgency=medium
+
+  * new upstream version
+  * copyright: updated with cme
+  * remove pristine-tar from build process
+  * update symbols file
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 28 Jul 2022 18:35:31 +0200
+
+libuv1 (1.44.1-2) unstable; urgency=medium
+
+  * update symbols file to fix hurd packaging
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 16 Mar 2022 19:16:11 +0100
+
+libuv1 (1.44.1-1) unstable; urgency=medium
+
+  * new upstream version
+  * update copyright with cme
+  * refresh patch
+  * update symbols file
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 13 Mar 2022 19:24:56 +0100
+
+libuv1 (1.43.0-1) unstable; urgency=medium
+
+  * new upstream version
+  * control:
+    * declare compliance with policy 4.6.0
+    * remove conflicts on ancient libuv0.10-dev package
+  * update copyright with cme
+  * do not install cmake files
+  * update symbols file
+  * README.source.org: add quilt pop -a instruction
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 15 Jan 2022 18:15:17 +0100
+
+libuv1 (1.42.0-1) unstable; urgency=medium
+
+  * new upstream version
+  * update fill.copyright.blanks
+  * update copyright with cme
+  * removed patch for CVE (applied upstream)
+  * refresh patch
+  * control:
+    * declare compliance with policy 4.5.1
+    * use debhelper 13
+    * set Rules-Requires-Root to no
+  * watch: watch github and use v4
+  * rules: remove obsolete dbgsym-migration instructions
+  * update symbols file
+  * converted README.source to org-mode
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 11 Sep 2021 18:50:00 +0200
+
 libuv1 (1.40.0-2pexip3) pexip-bullseye; urgency=medium
 
   * Bullseye rebuild for ARM64 inclusion

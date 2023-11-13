@@ -5,16 +5,17 @@ Uploaders: Luca Bruno <lucab@debian.org>
 Section: libs
 Priority: optional
 Build-Depends: cmake,
-               debhelper-compat (= 12),
+               debhelper-compat (= 13),
                dh-exec,
                freebsd-glue [kfreebsd-any],
                libkvm-dev [kfreebsd-any],
                netbase,
                pkg-config
-Standards-Version: 4.5.0
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/debian/libuv1
 Vcs-Git: https://salsa.debian.org/debian/libuv1.git
 Homepage: https://github.com/libuv/libuv
+Rules-Requires-Root: no
 XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: libuv1-dev
@@ -25,8 +26,7 @@ Depends: ${misc:Depends},
          freebsd-glue [kfreebsd-any],
          libkvm-dev [kfreebsd-any],
          libuv1 (= ${binary:Version})
-Conflicts: libuv-dev,
-           libuv0.10-dev
+Conflicts: libuv-dev
 Replaces: libuv-dev
 Description: asynchronous event notification library - development files
  Libuv is the asynchronous library behind Node.js. Very similar to libevent or
