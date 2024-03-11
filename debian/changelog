@@ -1,3 +1,15 @@
+libuv1 (1.44.2-1+deb12u1+pexip24u1) pexip; urgency=medium
+
+  * New upstream release.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Mon, 11 Mar 2024 10:19:32 +0000
+
+libuv1 (1.44.2-1+deb12u1) bookworm-security; urgency=medium
+
+  * add patch to fix CVE-2024-24806 (Closes: 1063484)
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 20 Feb 2024 18:28:54 +0100
+
 libuv1 (1.44.2-1+pexip24u3) pexip-bookworm; urgency=medium
 
   * New versioning scheme
