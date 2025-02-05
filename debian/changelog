@@ -1,8 +1,139 @@
-libuv1 (1.44.2-1+deb12u1) bookworm-security; urgency=medium
+libuv1 (1.50.0-2) unstable; urgency=medium
 
-  * add patch to fix CVE-2024-24806 (Closes: 1063484)
+  [ Jérémy Lal ]
+  * Drop ath_max_zero_st_size patch - fixed upstream
 
- -- Dominique Dumont <dod@debian.org>  Tue, 20 Feb 2024 18:28:54 +0100
+ -- Dominique Dumont <dod@debian.org>  Wed, 05 Feb 2025 11:16:12 +0100
+
+libuv1 (1.50.0-1) unstable; urgency=medium
+
+  [ Dominique Dumont ]
+  * new upstream version
+  * copyright: update with cme
+  * refreshed patches
+  * update symbols file
+  * control: declare compliance with Debian policy 4.7.0
+
+ -- Dominique Dumont <dod@debian.org>  Mon, 03 Feb 2025 12:06:04 +0100
+
+libuv1 (1.49.2-3) experimental; urgency=medium
+
+  * update fix-thread-priority patch
+  * update fix-arm-bug patch header
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 29 Jan 2025 19:07:52 +0100
+
+libuv1 (1.49.2-2) experimental; urgency=medium
+
+  * add fix-arm-bug patch
+  * remove unused lintian override
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 28 Jan 2025 19:27:46 +0100
+
+libuv1 (1.49.2-1) experimental; urgency=medium
+
+  [ Dominique Dumont ]
+  * new upstream version
+  * copyright: update with cme
+  * refreshed patches
+  * remove hurd patches
+  * update symbols file
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 18 Jan 2025 18:06:25 +0100
+
+libuv1 (1.48.0-7) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS: Move sphinx dependencies to B-D-I. (Closes: 1086732)
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 06 Nov 2024 18:24:35 +0100
+
+libuv1 (1.48.0-6) unstable; urgency=medium
+
+  [ Olivier Valentin ]
+  * Upstreamed patches to fix building on the GNU/Hurd
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 04 Sep 2024 17:11:33 +0200
+
+libuv1 (1.48.0-5) unstable; urgency=medium
+
+  * add patch to fix thread-priority test (Closes: 1071194)
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 19 Jun 2024 18:57:50 +0200
+
+libuv1 (1.48.0-4) unstable; urgency=medium
+
+  * control: set Provides to ${t64:Provides} (Closes: #1071034)
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 15 May 2024 17:52:58 +0200
+
+libuv1 (1.48.0-3) unstable; urgency=medium
+
+  * rename libuv1 package to libuv1t64 (Closes: 1070912)
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 12 May 2024 16:33:19 +0200
+
+libuv1 (1.48.0-2) unstable; urgency=medium
+
+  [ Jérémy Lal ]
+  * new package libuv1-doc using sphinxdoc. Closes: #1017581.
+  * patch: fix privacy-breach-generic in html doc
+
+  [ Dominique Dumont ]
+  * add patch to support loong64.
+    Thanks to Graham Inggs (Closes: #1069214)
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 05 May 2024 18:20:25 +0200
+
+libuv1 (1.48.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1062694
+
+ -- Graham Inggs <ginggs@debian.org>  Wed, 28 Feb 2024 21:01:37 +0000
+
+libuv1 (1.48.0-1) unstable; urgency=medium
+
+  [ Dominique Dumont ]
+  * new upstream version:
+    * Fix CVE-2024-24806 (Closes: #1063484)
+  * copyright: update with cme
+  * refreshed patches
+  * rm patch lp2046442-linux-don-t-use-io_uring-...
+  * refreshed symbols file
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 14 Feb 2024 18:47:19 +0100
+
+libuv1 (1.46.0-3) unstable; urgency=medium
+
+  * add patch to fix build on kernel < 5.10.186.
+    Thanks to Simon Choppin and Ubuntu fot the patch (Closes: 1058743)
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 30 Dec 2023 18:32:28 +0100
+
+libuv1 (1.46.0-2) unstable; urgency=medium
+
+  * re-release to unstable
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 15 Oct 2023 16:37:48 +0200
+
+libuv1 (1.46.0-1) experimental; urgency=medium
+
+  * new upstream release:
+  * control: declare compliance with policy 4.6.2
+  * control: drop kfreebsd (dropped upstream)
+  * fill-copyright-blanks:
+    * specify license of a test file
+    * drop removed files
+    * specify CC-BY-4.0 license for doc files
+  * refreshed copyright with cme
+  * install LICENSE-extra file in libuv1-dev.docs
+  * refreshed patches
+  * update symbols file
+  * ship libuv.a instead of libuv_a.a
+  * update README.source.org
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 05 Sep 2023 18:34:19 +0200
 
 libuv1 (1.44.2-1) unstable; urgency=medium
 

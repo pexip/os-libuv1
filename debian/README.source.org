@@ -70,7 +70,7 @@ Regenerate the symbol file:
 
 #+begin_src shell :var BUILD_DIR="../../build-area" VERSION=version :results verbatim :exports code
   cd $BUILD_DIR/libuv1-$VERSION
-  dpkg-gensymbols -plibuv1
+  dpkg-gensymbols -plibuv1t64
 #+end_src
 
 If you get an error with the =cd= command, redo the previous
@@ -78,28 +78,28 @@ step without forgetting the --git-no-purge flag.
 
 Then review the diff (see links below)
 
-See [[https://www.debian.org/doc/manuals/maint-guide/advanced.en.html#librarysymbols][Debian main guide]] and [[https://www.man7.org/linux/man-pages/man1/dpkg-gensymbols.1.html][dpkg-gensymbols(1)]].
+See [[https://www.debian.org/doc/manuals/maint-guide/advanced.en.html#librarysymbols][Debian main guide]], [[https://qt-kde-team.pages.debian.net/symbolfiles.html][KDE symbol tool]] and [[https://www.man7.org/linux/man-pages/man1/dpkg-gensymbols.1.html][dpkg-gensymbols(1)]].
 
 If the diff is fine, create a patch:
 
 #+begin_src shell :var BUILD_DIR="../../build-area" VERSION=version :results none :exports code
   cd $BUILD_DIR/libuv1-$VERSION
-  dpkg-gensymbols -plibuv1 |perl -p -E 's/([\d.]+)-\d[^#\n]*/$1/ if /^\+ /; s/~\d[^#\n]*//;' > /tmp/sym.patch
+  dpkg-gensymbols -plibuv1t64 |perl -p -E 's/([\d.]+)-\d[^#\n]*/$1/ if /^\+ /; s/~\d[^#\n]*//;' > /tmp/sym.patch
 #+end_src
 
 And apply the patch:
 
 #+begin_src shell :dir ".." :results verbatim :exports code
-  patch debian/libuv1.symbols /tmp/sym.patch
+  patch debian/libuv1t64.symbols /tmp/sym.patch
 #+end_src
 
 #+RESULTS:
-: patching file debian/libuv1.symbols
+: patching file debian/libuv1t64.symbols
 
 And commit the results:
 
 #+begin_src shell :dir ".." :results verbatim :exports code
-  git add debian/libuv1.symbols
+  git add debian/libuv1t64.symbols
   git commit -m "update symbols file"
 #+end_src
 
@@ -116,11 +116,17 @@ You can rebuild (if needed) with the following command:
 
 Note: only committed changes are used by gbp buildpackage
 
-Update the changelog:
+Update the changelog to push on experimental:
 
 #+begin_src shell :dir ".." :results verbatim :exports code
-  gbp dch -Ra --commit
+  gbp dch -Ra --commit --distribution=experimental
 #+end_src
+
+Or to push on unstable:
+#+begin_src shell :dir ".." :results verbatim :exports code
+  gbp dch -Ra --commit --distribution=unstable
+#+end_src
+
 
 Once everything is fine, build a source package and tag:
 
@@ -133,6 +139,15 @@ Push on salsa:
 #+begin_src shell :dir ".." :results verbatim :exports code
   gbp push
 #+end_src
+
+After 1 week or so, if nobody complains, the new package can be
+released in unstable (See [[https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1016305#37][#1016305]] for more context):
+
+
+#+begin_src shell :dir ".." :results verbatim :exports code
+  gbp dch -Ra --commit --distribution=unstable
+#+end_src
+
 
 For more details, see [[https://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.import.upstream-git.html#gbp.import.upstream.git.notarball][gbp import with git documentation]].
 

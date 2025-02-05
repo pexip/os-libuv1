@@ -1,6 +1,8 @@
+add-support-for-loong64.patch
 sparc-skip-tcp_oob.diff
 #iovec_rw_fix.patch
 disable_ipv6_test.patch
-path_max_zero_st_size
 skip-multicast-test
-fix-cve-2024-24806
+privacy-breach-generic.patch
+fix-thread-priority-test
+fix-arm-bug
