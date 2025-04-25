@@ -33,3 +33,11 @@ ifeq ($(DEB_BUILD_ARCH_OS),linux)
 else
 	-dh_auto_test
 endif
+
+execute_before_dh_sphinxdoc:
+ifeq (,$(findstring nodoc, $(DEB_BUILD_OPTIONS)))
+	sphinx-build -D html_theme=default docs/src/ $(CURDIR)/debian/libuv1-doc/usr/share/doc/libuv1/html
+endif
+
+execute_after_dh_installdocs-indep:
+	rm -f $(CURDIR)/debian/libuv1-doc/usr/share/doc/libuv1-dev/code/.gitignore
