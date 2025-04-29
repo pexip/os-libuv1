@@ -1,3 +1,9 @@
+libuv1 (1.50.0-2+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 22:38:16 +0100
+
 libuv1 (1.50.0-2) unstable; urgency=medium
 
   [ Jérémy Lal ]
