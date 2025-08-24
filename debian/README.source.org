@@ -118,12 +118,12 @@ Note: only committed changes are used by gbp buildpackage
 
 Update the changelog to push on experimental:
 
-#+begin_src shell :dir ".." :results verbatim :exports code
+#+begin_src shell :dir ".." :results verbatim :exports code :eval no
   gbp dch -Ra --commit --distribution=experimental
 #+end_src
 
 Or to push on unstable:
-#+begin_src shell :dir ".." :results verbatim :exports code
+#+begin_src shell :dir ".." :results verbatim :exports code :eval no
   gbp dch -Ra --commit --distribution=unstable
 #+end_src
 
