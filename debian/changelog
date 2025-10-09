@@ -1,3 +1,24 @@
+libuv1 (1.51.0-2) unstable; urgency=medium
+
+  [ Dominique Dumont ]
+  * control: add kapouer as uploader, rm lucab
+
+  [ Jérémy Lal ]
+  * Release to unstable.
+  * patch: disable io_uring on sh4. Closes: #1111616.
+
+ -- Jérémy Lal <kapouer@melix.org>  Sun, 24 Aug 2025 17:48:29 +0200
+
+libuv1 (1.51.0-1) experimental; urgency=medium
+
+  * new upstream version
+  * copyright: updated with cme
+  * remove fix-arm-bug patch (applied upstream)
+  * update symbols file
+  * README.source.org: do not eval "gbp dch" instructions
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 09 Aug 2025 18:50:29 +0200
+
 libuv1 (1.50.0-2+pexip25u1) pexip-trixie; urgency=medium
 
   * Initial trixie build

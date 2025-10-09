@@ -1,7 +1,7 @@
 Source: libuv1
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Dominique Dumont <dod@debian.org>
-Uploaders: Luca Bruno <lucab@debian.org>
+XSBC-Pexip-Original-Uploaders: Jérémy Lal <kapouer@debian.org>
 Section: libs
 Priority: optional
 Build-Depends: cmake,

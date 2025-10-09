@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://github.com/libuv/libuv
 Upstream-Name: libuv
 Upstream-Contact: https://github.com/libuv/libuv/issues
-Source: https://github.com/libuv/libuv
 
 Files: *
 Copyright: 2015-2025, libuv project contributors.
@@ -188,6 +188,7 @@ Files: test/benchmark-queue-work.c
  test/test-env-vars.c
  test/test-get-passwd.c
  test/test-gethostname.c
+ test/test-loop-oom.c
  test/test-process-priority.c
  test/test-random.c
  test/test-tcp-try-write-error.c

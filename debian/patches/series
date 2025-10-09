@@ -5,5 +5,5 @@ disable_ipv6_test.patch
 skip-multicast-test
 privacy-breach-generic.patch
 fix-thread-priority-test
-fix-arm-bug
+sh4-disable-io_uring.patch
 pexip_fix_spawn_test
