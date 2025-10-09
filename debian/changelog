@@ -1,6 +1,7 @@
 libuv1 (1.51.0-2+pexip24u1) pexip; urgency=medium
 
   * Backport forky version for nodejs22.
+  * Revert t64 transition for bookworm.
 
  -- Mark Hymers <mark.hymers@pexip.com>  Thu, 09 Oct 2025 14:55:32 +0100
 

@@ -23,7 +23,7 @@ Architecture: linux-any hurd-any
 Multi-Arch: same
 Section: libdevel
 Depends: ${misc:Depends},
-         libuv1t64 (= ${binary:Version})
+         libuv1 (= ${binary:Version})
 Suggests: libuv1-doc
 Conflicts: libuv-dev
 Replaces: libuv-dev
@@ -43,14 +43,13 @@ Description: asynchronous event notification library - development files
  Install this package if you wish to develop your own programs using the
  libuv engine.
 
-Package: libuv1t64
+Package: libuv1
 Architecture: linux-any hurd-any
 Multi-Arch: same
 Depends: ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Breaks: libuv1 (<< 1.48.0-1.1)
-Provides: ${t64:Provides}
 Replaces: libuv1
 Description: asynchronous event notification library - runtime library
  Libuv is the asynchronous library behind Node.js. Very similar to libevent or

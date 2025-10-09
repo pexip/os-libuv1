@@ -1,4 +1,4 @@
-libuv.so.1 libuv1t64 #MINVER#
+libuv.so.1 libuv1 #MINVER#
 * Build-Depends-Package: libuv1-dev
 #MISSING: 1.51.0-1# (regex|optional)"^uv__" 1.0
 #MISSING: 1.51.0-1# (arch=linux-any|optional)uv__accept4@Base 1.11.0
