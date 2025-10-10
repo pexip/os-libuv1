@@ -16,7 +16,7 @@ Vcs-Browser: https://salsa.debian.org/debian/libuv1
 Vcs-Git: https://salsa.debian.org/debian/libuv1.git
 Homepage: https://github.com/libuv/libuv
 Rules-Requires-Root: no
-XS-Pexip-Upstream: http://deb.debian.org/debian/ testing
+XS-Pexip-Upstream: http://deb.debian.org/debian/ forky
 
 Package: libuv1-dev
 Architecture: linux-any hurd-any
